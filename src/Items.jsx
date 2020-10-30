@@ -6,20 +6,24 @@ function Items(props) {
   const itemData = Data.items.map((item, index) => {
     return <li
     class="list-group-item d-flex justify-content-between align-items-center"
-    onClick={() => console.log(item)}
+    onClick={() => props.addToCart(item)}
     >
       {item.item}
       <span class="badge badge-primary badge-pill">{item.price}</span>
     </li>
   })
   const accessorieData = Data.accessories.map((item, index) => {
-    return <li class="list-group-item d-flex justify-content-between align-items-center">
+    return <li class="list-group-item d-flex justify-content-between align-items-center"
+    onClick={() => props.addToCart(item)}
+    >
       {item.item}
       <span class="badge badge-primary badge-pill">{item.price}</span>
     </li>
   })
   const shippingData = Data.shipping.map((item, index) => {
-    return <li class="list-group-item d-flex justify-content-between align-items-center">
+    return <li class="list-group-item d-flex justify-content-between align-items-center"
+    onClick={() => props.addToCart(item)}
+    >
       {item.item}
       <span class="badge badge-primary badge-pill">{item.price}</span>
     </li>
@@ -36,9 +40,6 @@ function Items(props) {
             : props.currentPage === 2 ? content = shippingData
             : content = "Coming soon"
     }
-      
-
-
       </ul>
     </>
   )

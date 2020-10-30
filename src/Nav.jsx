@@ -21,8 +21,11 @@ function Nav(props) {
                     </a>
                 )
               })
+              
             }
-            
+            <div className="nav-item" >Items: {props.cart.length}</div>
+            <div className="nav-item" >Total: ${props.total()}</div>
+
             {/* <a className="nav-item nav-link active" >Home</a>
             <a className="nav-item nav-link" >Features</a>
             <a className="nav-item nav-link" >Pricing</a>
