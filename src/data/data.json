@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "item": "Big Fishing Pole",
+      "price": 20
+    },
+    {
+      "item": "Medium Fishing Pole",
+      "price": 15
+    },
+    {
+      "item": "Small Fishing Pole",
+      "price": 10
+    },
+    {
+      "item": "Just a Giant Stick",
+      "price": 50
+    },
+    {
+      "item": "I dunno, some rocks?",
+      "price": 30
+    }
+  ],
+
+  "accessories": [
+    {
+      "item": "Slimy Worms",
+      "price": 3
+    },
+    {
+      "item": "Not so slimy worms",
+      "price": 5
+    },
+    {
+      "item": "Live Crickets",
+      "price": 15
+    },
+    {
+      "item": "Mystery creature?",
+      "price": 2
+    },
+    {
+      "item": "A... turtle?",
+      "price": 60
+    }
+  ],
+  "shipping": [
+    {
+      "item": "Come get it, I'm not your mommy",
+      "price": 0
+    },
+    {
+      "item": "You're seriously gonna make me come down there?",
+      "price": 1000
+    },
+    {
+      "item": "Whoa... wait a minute. Mr. Postman?",
+      "price": 10
+    }
+  ]
+}

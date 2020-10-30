@@ -1,16 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import Nav from './Nav'
+import Checkout from './Checkout'
+import Items from './Items'
 
 
 function App() {
 
-  let pages = ["Items", "Accesories", "Shipping", "Submit"]
+  let pages = ["Items", "Accessories", "Shipping", "Submit"]
+  // let shoppingCart = []
    
   const [currentPage, setCurrentPage] = useState(0)
 
   //component did update
   const setPage = (newPageNum) => {
-    console.log(newPageNum)
+    // console.log(newPageNum)
     setCurrentPage(newPageNum)
     window.localStorage.setItem('currentPage', JSON.stringify(newPageNum))
   }
@@ -21,20 +24,35 @@ function App() {
     if(lsPage !== currentPage) {
       setCurrentPage(JSON.parse(lsPage))
     }
-    console.log('in use effect')
+    console.log(currentPage)
   }, [currentPage])
 
+  const addToCart = (item) => {
+    console.log(item)
+  }
 
-
+  let content = ""
   return (
     <div className="container">
       <Nav
         pages={pages}
         currentPage={currentPage}
         setPage={setPage}
-      
       />
-      <h1>Fishing Hooks</h1>
+    {pages.map((item, index) => {
+      if(currentPage < 3) {
+       content = <Items
+        currentPage={currentPage}
+        pages={pages}
+        addToCart={addToCart}
+       />
+      } else if(currentPage === 3) {
+        content = <Checkout
+        currentPage={currentPage}
+        />
+      }
+    })}
+    {content}
     </div>
   );
 }
