@@ -23,8 +23,8 @@ function Nav(props) {
               })
               
             }
-            <div className="nav-item" >Items: {props.cart.length}</div>
-            <div className="nav-item" >Total: ${props.total()}</div>
+            <div className="nav-item nav-link active" >Items: {props.cart.length}</div>
+            <div className="nav-item nav-link active" >Total: ${props.total()}</div>
 
             {/* <a className="nav-item nav-link active" >Home</a>
             <a className="nav-item nav-link" >Features</a>
