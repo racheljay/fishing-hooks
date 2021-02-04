@@ -1,8 +1,8 @@
 # Fishing Hooks
 
 ## Requirements
-    1. Use React Hooks to handle state management and lifecycle
-    2. Keep track of what "page" you are currently on
+1. Use React Hooks to handle state management and lifecycle
+2. Keep track of what "page" you are currently on
 3. Block access to "submit" page until shipping info filled out
 4. Keep running total and update as user changes their order form (Initially, the total should be 0) 
 5. When the user clicks a service, hilight that service and add it's cost to the total.
@@ -14,9 +14,9 @@
     - items
         - render JSON Object with names and prices
         - on click "add to cart"
-    - accesories
+    - accessories
     - shipping
-        - similiar to items and accesories but with a checkout button that unlocks the submit
+        - similar to items and accessories but with a checkout button that unlocks the submit
     - submit
         - some sort of form
         - add tax at the end or as a live update
