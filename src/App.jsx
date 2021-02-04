@@ -13,7 +13,7 @@ function App() {
 
   //component did update
   const setPage = (newPageNum) => {
-    // console.log(newPageNum)
+    console.log('did update')
     setCurrentPage(newPageNum)
     window.localStorage.setItem('currentPage', JSON.stringify(newPageNum))
 
